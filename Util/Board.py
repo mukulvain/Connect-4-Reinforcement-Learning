@@ -43,7 +43,8 @@ class Board:
             if self.board[r][column] == 0:
                 self.board[r][column] = self.player
                 invalid = False
-                break
+                # break
+                return r,column
         if not invalid:
             self.player = 3 - self.player  # Switch player
 

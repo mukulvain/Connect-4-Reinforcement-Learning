@@ -11,7 +11,8 @@ from Util.Game import Game
 with open("Bot/bot.pkl", "rb") as f:
     bot2 = pickle.load(f)
 
-agent1 = QLearningAgent(bot2)
+# agent1 = QLearningAgent(bot2)
+agent1 = Human()
 agent2 = MiniMaxAgent(2)
 
 test_env = Board()
