@@ -5,14 +5,15 @@ from Agents.MiniMaxAgent import MiniMaxAgent
 from Agents.QLearningAgent import QLearningAgent
 from Agents.RandomAgent import RandomAgent
 from Agents.SmartAgent import SmartAgent
+from Agents.MCTS import MCTSAgent
 from Util.Board import Board
 from Util.Game import Game
 
 with open("Bot/bot.pkl", "rb") as f:
     bot2 = pickle.load(f)
 
-# agent1 = QLearningAgent(bot2)
-agent1 = Human()
+agent1 = QLearningAgent(bot2)
+# agent1 = MCTSAgent(1)
 agent2 = MiniMaxAgent(2)
 
 test_env = Board()

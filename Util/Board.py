@@ -82,3 +82,9 @@ class Board:
     def reset(self):
         self.board = np.zeros((6, 7), dtype=int)
         self.player = 1
+
+    def copy(self):
+        b = Board()
+        b.board = np.copy(self.board)
+        b.player = self.player
+        return b
